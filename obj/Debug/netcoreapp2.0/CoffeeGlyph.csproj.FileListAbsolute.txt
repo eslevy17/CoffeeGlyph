@@ -1,0 +1,11 @@
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/bin/Debug/netcoreapp2.0/CoffeeGlyph.deps.json
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/bin/Debug/netcoreapp2.0/CoffeeGlyph.runtimeconfig.json
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/bin/Debug/netcoreapp2.0/CoffeeGlyph.runtimeconfig.dev.json
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/bin/Debug/netcoreapp2.0/CoffeeGlyph.dll
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/bin/Debug/netcoreapp2.0/CoffeeGlyph.pdb
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.csprojResolveAssemblyReference.cache
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.csproj.CoreCompileInputs.cache
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.AssemblyInfoInputs.cache
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.AssemblyInfo.cs
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.dll
+/Users/ESL/Desktop/Coding Dojo Projects/C#/ORM/CoffeeGlyph/obj/Debug/netcoreapp2.0/CoffeeGlyph.pdb

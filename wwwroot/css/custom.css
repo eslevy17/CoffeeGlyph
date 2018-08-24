@@ -1,0 +1,203 @@
+.backdrop {
+    /* background-image: url('../images/coffeebeans.jpg'); */
+    /* background-size: cover;
+    width: 100%;
+    min-height: 100vh; */
+    padding: 20px;
+    position: relative;
+    /* z-index: 0; */
+    /* display: none; */
+}
+.background {
+    position: fixed;
+    min-height: 100%;
+    min-width: 100%;
+    margin-top: -20px;
+    margin-left: -20px;
+    z-index: -1;
+}
+.glasscontainer {
+    text-align: center;
+}
+.glass {
+    width: 0;
+    height: 0;
+    margin-top: 250px;
+    display: none;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    vertical-align: top;
+}
+.blankspace {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 0px;
+    border: 4px solid aliceblue;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+}
+.whip {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.foam {
+    background-image: linear-gradient(to right,#ebf2eb, #b1b1ab);
+    background-image: url('../images/foam.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.milk {
+    color: #bebebb;
+    background-image: linear-gradient(to right, #ddddd9, #bebebb);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.water {
+    background-image: linear-gradient(to right, #c2dbe3, #94b2ba);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.cocoa {
+    background-image: linear-gradient(to bottom right, #493729, #1b150f);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.tea {
+    background-image: linear-gradient(to bottom right, #b75920, #983912);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+.drip {
+    background-image: linear-gradient(to bottom right, #493729, #1b150f);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.espresso {
+    background-image: linear-gradient(to bottom right, #241c10, #16110a);
+    width: 100%;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ingredientblock {
+    background-color: grey;
+    padding: 6px 24px 12px 24px;
+    box-shadow: 2px 2px 18px 2px #222;
+    z-index: 1;
+}
+.titletext {
+    font-family: 'kaushan script';
+    text-align: center;
+    margin: 0;
+    font-size: 48px;
+    color: antiquewhite;
+    z-index: 2;
+}
+p, h1, h2, h3, h4, h5, h6, button, li {
+    font-family: 'open sans'
+}
+.menubar {
+    text-align: center;
+    background-image: linear-gradient(#007755, #005533);
+    border-radius: 10px;
+    z-index: 1;
+}
+.menubar li {
+    display: inline-block;
+    padding: 16px;
+    font-size: 16px;
+}
+.dropdown-parent-li {
+    color: white;
+}
+.dropdown-parent-li:hover {
+    background-color: #009977;
+}
+.dropdown-parent {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-parent:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: lightseagreen;
+    z-index: 2;
+    min-width: 120px;
+    box-shadow: 2px 8px 40px 2px #222;
+}
+.dropdown-content li {
+    display: block;
+    font-size: 14px;
+}
+.dropdown-content li:hover {
+    background-color: #25dad0;
+}
+/* .table {
+    margin: 0px;
+    width: 96%;
+    height: 0px;
+    border-right: 50px solid transparent;
+    border-left: 50px solid transparent;
+    border-bottom: 280px solid #5c401d;
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+} */
+.newtable {
+    width: 95%;
+    height: 50px;
+    background-color: saddlebrown;
+    position: absolute;
+    top: 456px;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.leftleg {
+    width: 45px;
+    height: 130px;
+    background-image: linear-gradient(#53290b,#773a0f,#8b4513);
+    position: absolute;
+    top: 50px;
+    left: 80px;
+}
+.rightleg {
+    width: 45px;
+    height: 130px;
+    background-image: linear-gradient(#53290b,#773a0f,#8b4513);
+    position: absolute;
+    top: 50px;
+    right: 80px;
+}
+hr {
+    border-color: #555;
+}

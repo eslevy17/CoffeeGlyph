@@ -1,0 +1,238 @@
+﻿@model List<Coffee>
+<div class="backdrop">
+    <img class="background" src="~/images/coffeebeans.jpg">
+    <h1 class="titletext">Coffee Glyph</h1>
+    <div>
+        <ul class="menubar">
+        @{
+            <div class="dropdown-parent">
+                <li class="dropdown-parent-li">Shots</li>
+                <div class="dropdown-content">
+                @foreach (Coffee coffee in @ViewBag.Shots)
+                {
+                    <li id="@coffee.id">@coffee.name</li>
+                }
+                </div>
+            </div>
+            
+            <div class="dropdown-parent">
+                <li class="dropdown-parent-li">Espresso</li>
+                <div class="dropdown-content">
+                @foreach (Coffee coffee in @ViewBag.Espresso)
+                {
+                    <li id="@coffee.id">@coffee.name</li>
+                }
+                </div>
+            </div>
+
+            <div class="dropdown-parent">
+                <li class="dropdown-parent-li">Drip</li>
+                <div class="dropdown-content">
+                @foreach (Coffee coffee in @ViewBag.Drip)
+                {
+                    <li id="@coffee.id">@coffee.name</li>
+                }
+                </div>
+            </div>
+
+            <div class="dropdown-parent">
+                <li class="dropdown-parent-li">Tea</li>
+                <div class="dropdown-content">
+                @foreach (Coffee coffee in @ViewBag.Tea)
+                {
+                    <li id="@coffee.id">@coffee.name</li>
+                }
+                </div>
+            </div>
+        }
+        </ul>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-3 glasscontainer">
+            <div class="glass">
+                <div class="blankspace"></div>
+                <img class="whip" src="~/images/cream.png">
+                <div class="foam"></div>
+                <div class="milk"></div>
+                <div class="water"></div>
+                <div class="cocoa"></div>
+                <div class="tea"></div>
+                <div class="drip"></div>
+                <div class="espresso"></div>
+            </div>
+        </div>
+        <div class="col-sm-5 ingredientblock">
+            <h2 id="coffeetitle">Pick a coffee, any coffee!</h2>
+            <hr>
+            <h4 class="whipqty"></h4>
+            <h4 class="foamqty"></h4>
+            <h4 class="milkqty"></h4>
+            <h4 class="waterqty"></h4>
+            <h4 class="cocoaqty"></h4>
+            <h4 class="teaqty"></h4>
+            <h4 class="dripqty"></h4>
+            <h4 class="espressoqty"></h4>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="newtable">
+        <div class="leftleg"></div>
+        <div class="rightleg"></div>
+    </div>
+    <br>
+    <!-- <div class="table"></div> -->
+</div>
+
+@{
+    foreach(Coffee coffee in @Model)
+    {
+        <script>
+            var mult = 20;
+            $(document).ready(function(){
+
+                $('.backdrop').fadeIn('slow');
+
+                $('#@coffee.id').click(function(){
+
+                    $('#coffeetitle').text('@coffee.name');
+                    $('.glass').css('display', 'inline-block');
+
+                    $('.espresso').animate({
+                        height: '@coffee.espresso' * mult + 'px'}, 'slow');
+                    if (@coffee.espresso > 0) {
+                        $('.espressoqty').html('<b>Espresso: </b>' + @coffee.espresso.ToString() + ' oz');
+                    }
+                    else {
+                        $('.espressoqty').html('');
+                    }
+
+                    if (@coffee.size <= 4) {
+                        $('.espresso').css('border-top', '3px solid #c76700')
+                    }
+                    else {
+                        $('.espresso').css('border-top', 'none')
+                    }
+
+                    $('.drip').animate({
+                        height: '@coffee.drip' * mult + 'px'}, 'slow');
+                    if (@coffee.drip > 0) {    
+                        $('.dripqty').html('<b>Drip Coffee: </b>' + '@coffee.drip' + ' oz');
+                    }
+                    else {
+                        $('.dripqty').html('');
+                    }
+
+                    $('.tea').animate({
+                        height: '@coffee.tea' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + 'px',
+                        }, 'slow');
+                    if (@coffee.tea > 0) {    
+                        $('.teaqty').html('<b>Tea: </b>' + '@coffee.tea' + ' oz');
+                    }
+                    else {
+                        $('.teaqty').html('');
+                    }
+
+                    $('.cocoa').animate({
+                        height: '@coffee.cocoa' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + 'px',
+                        }, 'slow');
+                    if (@coffee.cocoa > 0) {    
+                        $('.cocoaqty').html('<b>Cocoa: </b>' + '@coffee.cocoa' + ' oz');
+                    }
+                    else {
+                        $('.cocoaqty').html('');
+                    }
+
+                    $('.water').animate({
+                        height: '@coffee.water' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + ('@coffee.cocoa' * mult) + 'px',
+                        }, 'slow');
+
+                    if (@coffee.water > 0) {
+                        $('.waterqty').html('<b>Water: </b>' + '@coffee.water' + ' oz');
+                    }
+                    else {
+                        $('.waterqty').html('');
+                    }
+                    
+                    $('.milk').animate({
+                        height: '@coffee.milk' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + ('@coffee.cocoa' * mult) + ('@coffee.water' * mult) + 'px',
+                        }, 'slow');
+                    if (@coffee.milk > 0) {
+                        $('.milkqty').html('<b>Milk: </b>' + '@coffee.milk' + ' oz');
+                    }
+                    else {
+                        $('.milkqty').html('');
+                    }
+
+                    $('.foam').animate({
+                        height: '@coffee.foam' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + ('@coffee.cocoa' * mult) + ('@coffee.water' * mult) + ('@coffee.milk' * mult) + 'px',}, 'slow');
+                    if (@coffee.foam > 0) {
+                        $('.foamqty').html('<b>Foam: </b>' + @coffee.foam.ToString() + ' oz');
+                    }
+                    else {
+                        $('.foamqty').html('');
+                    }
+
+                    $('.whip').animate({
+                        height: '@coffee.whip' * mult + 'px',
+                        bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + ('@coffee.cocoa' * mult) + ('@coffee.water' * mult) + ('@coffee.milk' * mult) + ('@coffee.foam' * mult) + 'px',
+                    }, 'slow');
+                    if (@coffee.whip > 0) {
+                        $('.whipqty').html('<b>Whipped Cream: </b>' + 'Yes!');
+                    }
+                    else {
+                        $('.whipqty').html('');
+                    }
+                    
+                    if (@coffee.size > 10) {
+                        $('.glass').animate({
+                            height: '@coffee.size' * mult + (mult*3) + 'px',
+                            width: '@coffee.size' * (mult/2) + 'px',
+                            marginTop: '-40' + 'px',
+                        }, 'slow');
+                        $('.blankspace').animate({
+                            height: '@coffee.size' * mult + mult + 'px',
+                            width: '@coffee.size' * (mult/2) + 'px',
+                            marginTop: '0' + 'px',
+                        }, 'slow');
+                    }
+                    else if (@coffee.size > 4 && @coffee.size <= 10) {
+                        $('.glass').animate({
+                            height: '@coffee.size' * mult + (mult*3) + 'px',
+                            width: '@coffee.size' * mult + 'px',
+                            marginTop: '220' - ('@coffee.size' * mult) - mult + 'px',
+                        }, 'slow');
+                        $('.blankspace').animate({
+                            height: '@coffee.size' * mult + mult + 'px',
+                            width: '@coffee.size' * mult + 'px',
+                            marginTop: '260' - ('@coffee.size' * mult) - mult + 'px',
+                        }, 'slow');
+                    }
+                    else if (@coffee.size <= 4) {
+                        $('.glass').animate({
+                            height: '@coffee.size' * mult + (mult*2) + 'px',
+                            width: '@coffee.size' * mult + 'px',
+                            marginTop: '240' - ('@coffee.size' * mult) - mult + 'px',
+                        }, 'slow');
+                        $('.blankspace').animate({
+                            height: '@coffee.size' * mult + mult/2 + 'px',
+                            width: '@coffee.size' * mult + 'px',
+                            marginTop: '270' - ('@coffee.size' * mult) - mult + 'px',
+                        }, 'slow');
+                    }
+                })
+            });
+        </script>
+    }
+}
+
