@@ -167,7 +167,7 @@
                         bottom: ('@coffee.espresso' * mult) + ('@coffee.drip' * mult) + ('@coffee.tea' * mult) + ('@coffee.cocoa' * mult) + ('@coffee.water' * mult) + 'px',
                         }, 'slow');
                     if (@coffee.milk > 0) {
-                        $('.milkqty').html('<b>Milk: </b>' + '@coffee.milk' + ' oz');
+                        $('.milkqty').html('<b>Milk: </b>' + '@coffee.milk' + ' oz (' + '@coffee.milktype' + ')');
                     }
                     else {
                         $('.milkqty').html('');

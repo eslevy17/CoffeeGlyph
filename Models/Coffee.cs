@@ -14,5 +14,6 @@ namespace CoffeeGlyph.Models
         public int whip { get; set; }
         public int size { get; set; }
         public string basis { get; set; }
+        public string milktype { get; set; }
     }
 }
